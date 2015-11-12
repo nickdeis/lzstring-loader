@@ -90,13 +90,8 @@ module.exports = function(content) {
 	self.cacheable && self.cacheable();
 	var type = resolveType(self);
 	var content = resolveContent(self,content,type);
-	console.log(content);
 	var compressed = compressContent(content);
 	self.value = [compressed];
-	if(type === "style"){
-		console.log(self.inputValue);
-		console.log(content);
-	}
 	var inlined = inliner(compressed,type);
 	return inlined;
 }
