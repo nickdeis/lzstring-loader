@@ -1,7 +1,8 @@
 # lzstring-loader
 lz-string for webpack
 
-Compresses a string and then decompresses it on in the bundle
+Compresses a string and then decompresses it on in the bundle.
+
 Ideal for large JSONs and large CSS files
 
 ## Usage
