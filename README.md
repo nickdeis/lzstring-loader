@@ -2,7 +2,11 @@
 lz-string for webpack
 
 Compresses a string and then decompresses it at runtime
-Ideal for large JSONs and large CSS files
+Ideal for large JSONs and large CSS files when gzip or serverside compression is not an option.
+
+```
+npm install lzstring-loader
+```
 
 ## Usage
 
