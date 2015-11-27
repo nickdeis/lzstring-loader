@@ -1,10 +1,9 @@
 module.exports = {
-  entry: './test.js',
+  entry: './build-test.js',
   output: {
-    filename: 'bundle.js'
+    filename: 'test.js'
   },
   resolve: {
-  // you can now require('file') instead of require('file.coffee')
   extensions: ['', '.js', '.json', '.coffee']
   }
 };

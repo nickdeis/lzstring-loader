@@ -1,7 +1,7 @@
 # lzstring-loader
 lz-string for webpack
 
-Compresses a string and then decompresses it on in the bundle
+Compresses a string and then decompresses it at runtime
 Ideal for large JSONs and large CSS files
 
 ## Usage
@@ -20,10 +20,32 @@ CSS (with style-loader)
 require("style!lzstring!./a.css");
 ```
 
-### TODO
+Use other lzstring methods with the query param **to**
+```javascript
+require("style!lzstring?to=utf16!./a.css");
+```
 
-Add support for all lzstring encodings via query params
+### Query params
+
+#### to
+
+The **default** is (compress/decompress)(To/From)Base64
+
+* **base64:** (compress/decompress)(To/From)Base64
+* **utf16:** (compress/decompress)(To/From)UTF16
+* **webkit-utf16:** (compress/decompress)
+* **uri:** (compress/decompress)(To/From)EncodedURIComponent
+* **uint8:** (compress/decompress)(To/From)Uint8Array
+
+
+## TODO
+
+
+#### Add support for script-loader
+
+#### Make json-loading a bit more polymorphic
+
 eg:
 ```javascript
-var string = require("lzstring?utf16!./a.txt");
+var json = require("json!lzstring!./a.json");
 ```
